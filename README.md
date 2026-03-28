@@ -41,3 +41,35 @@ AI Pokédex is a **smart Pokémon discovery engine** that combines:
 ---
 
 ## 🧱 Architecture
+```
+pokedex-ai/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/          # API routes
+│   │   ├── models/       # ML / DB models
+│   │   ├── schemas/      # Pydantic schemas
+│   │   ├── services/     # Business logic
+│   │   └── main.py       # FastAPI entry point
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── app/              # Next.js app router
+│   ├── components/       # UI components
+│   ├── lib/              # API utilities
+│   ├── public/           # Static assets
+│   ├── styles/           # CSS / Tailwind
+│   ├── types/            # TypeScript types
+│   └── package.json
+│
+├── ml/
+│   ├── data/             # Dataset
+│   ├── models/           # Trained models
+│   ├── training/         # Training scripts
+│   └── utils/            # ML helpers
+│
+├── infra/                # Deployment configs
+├── README.md
+└── .gitignore
+```
