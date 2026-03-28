@@ -1,0 +1,21 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "<!-- BANNER -->\r <h1 align=\"center\">🧠✨ AI Pokédex</h1>\r <p align=\"center\">\r   <b>Production-grade AI-powered Pokédex</b><br/>\r   Full-stack • Machine Learning • NLP • Scalable Systems\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deoxyforge/pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/deoxyforge/pokedex/issues"
+  },
+  "homepage": "https://github.com/deoxyforge/pokedex#readme"
+}
