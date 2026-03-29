@@ -46,30 +46,76 @@ pokedex-ai/
 │
 ├── backend/
 │   ├── app/
-│   │   ├── api/          # API routes
-│   │   ├── models/       # ML / DB models
-│   │   ├── schemas/      # Pydantic schemas
-│   │   ├── services/     # Business logic
-│   │   └── main.py       # FastAPI entry point
+│   │   ├── api/
+│   │   │   ├── routes.py        # Main API routes
+│   │   │   └── deps.py          # Dependencies (DB, etc.)
+│   │   │
+│   │   ├── models/
+│   │   │   └── pokemon_model.py # DB / ML models
+│   │   │
+│   │   ├── schemas/
+│   │   │   └── pokemon_schema.py # Pydantic schemas
+│   │   │
+│   │   ├── services/
+│   │   │   └── pokemon_service.py # Business logic
+│   │   │
+│   │   ├── core/
+│   │   │   └── config.py        # App configuration
+│   │   │
+│   │   └── main.py              # FastAPI entry point
+│   │
 │   ├── requirements.txt
-│   └── Dockerfile
+│   ├── Dockerfile
+│   └── .env.example
 │
 ├── frontend/
-│   ├── app/              # Next.js app router
-│   ├── components/       # UI components
-│   ├── lib/              # API utilities
-│   ├── public/           # Static assets
-│   ├── styles/           # CSS / Tailwind
-│   ├── types/            # TypeScript types
-│   └── package.json
+│   ├── app/
+│   │   ├── page.tsx             # Home page
+│   │   └── layout.tsx           # Layout
+│   │
+│   ├── components/
+│   │   ├── PokemonCard.tsx
+│   │   ├── Navbar.tsx
+│   │   └── SearchBar.tsx
+│   │
+│   ├── lib/
+│   │   └── api.ts               # API calls
+│   │
+│   ├── public/
+│   │   └── logo.png
+│   │
+│   ├── styles/
+│   │   └── globals.css
+│   │
+│   ├── types/
+│   │   └── pokemon.ts           # Type definitions
+│   │
+│   ├── package.json
+│   └── tsconfig.json
 │
 ├── ml/
-│   ├── data/             # Dataset
-│   ├── models/           # Trained models
-│   ├── training/         # Training scripts
-│   └── utils/            # ML helpers
+│   ├── data/
+│   │   └── dataset.csv
+│   │
+│   ├── models/
+│   │   └── model.pkl            # Trained ML model
+│   │
+│   ├── training/
+│   │   └── train.py             # Training script
+│   │
+│   ├── inference/
+│   │   └── predict.py           # Prediction logic
+│   │
+│   └── utils/
+│       └── preprocess.py
 │
-├── infra/                # Deployment configs
+├── infra/
+│   ├── docker-compose.yml
+│   └── nginx.conf
+│
+├── docs/
+│   └── architecture.md
+│
 ├── README.md
 └── .gitignore
 ```
